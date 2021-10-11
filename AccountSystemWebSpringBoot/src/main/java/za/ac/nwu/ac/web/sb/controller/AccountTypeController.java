@@ -22,8 +22,7 @@ public class AccountTypeController {
             @ApiResponse(code = 404, message = "Not found", response = GeneralResponse.class),
             @ApiResponse(code = 500, message = "Internal Server Error", response = GeneralResponse.class)})
     public ResponseEntity<String> ping(
-            @RequestParam(value = "value that will be echoed", defaultValue = "pong")
- String echo) {
+            @RequestParam(value = "value that will be echoed", defaultValue = "pong") String echo) {
          return new ResponseEntity<>(echo, HttpStatus.OK);
     }
 }
